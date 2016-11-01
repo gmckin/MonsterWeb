@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonsterWeb.Client", "Monste
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonsterWeb.Logic", "MonsterWeb.Logic\MonsterWeb.Logic.csproj", "{ED6DA67B-20F0-402F-B71C-29EBE712E23F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonsterWeb.Tests", "MonsterWeb.Tests\MonsterWeb.Tests.csproj", "{8434AF07-40CB-4CB3-BCB4-36955509EF60}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{ED6DA67B-20F0-402F-B71C-29EBE712E23F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED6DA67B-20F0-402F-B71C-29EBE712E23F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED6DA67B-20F0-402F-B71C-29EBE712E23F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8434AF07-40CB-4CB3-BCB4-36955509EF60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8434AF07-40CB-4CB3-BCB4-36955509EF60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8434AF07-40CB-4CB3-BCB4-36955509EF60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8434AF07-40CB-4CB3-BCB4-36955509EF60}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
