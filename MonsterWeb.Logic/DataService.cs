@@ -19,5 +19,15 @@ namespace MonsterWeb.Logic
       {
         return msc.GetGender().ToList();
       }
+
+    public List<MonsterTypeDAO> GetMonsterType()
+    {
+      return msc.GetMonsterType().ToList();
     }
+
+    public List<TitleDAO> GetTitles()
+    {
+      return msc.GetTitles().ToList();
+    }
+  }
   }

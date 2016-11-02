@@ -15,5 +15,15 @@ namespace MonsterWeb.Logic
     {
       data.GetGender();
     }
+
+    public void GetMonsterTypes()
+    {
+      data.GetMonsterType();
+    }
+
+    public void GetTitles()
+    {
+      data.GetTitles();
+    }
   }  
 }

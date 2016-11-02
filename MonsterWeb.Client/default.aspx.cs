@@ -15,6 +15,8 @@ namespace MonsterWeb.Client
     protected void Page_Load(object sender, EventArgs e)
     {
       GetGenders();
+      GetMonsterTypes();
+      GetTitles();
 
     }
     private void GetGenders()
@@ -27,6 +29,27 @@ namespace MonsterWeb.Client
         genderlist.Items.Add(item.Name);
       }
       
+    }
+
+    private void GetMonsterTypes()
+    {
+      var data = new DataService();
+      monstertypelist.Items.Clear();
+
+      foreach (var item in data.GetMonsterType())
+      {
+        monstertypelist.Items.Add(item.Name);
+      }
+    }
+      private void GetTitles()
+    {
+      var data = new DataService();
+      titlelist.Items.Clear();
+
+      foreach (var item in data.GetTitles())
+      {
+        titlelist.Items.Add(item.Name);
+      }
     }
   }
 }

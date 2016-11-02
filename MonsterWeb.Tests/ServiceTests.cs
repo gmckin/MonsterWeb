@@ -18,5 +18,23 @@ namespace MonsterWeb.Tests
 
       Assert.NotNull(actual);
     }
+
+    [Fact]
+    public void Test_MonsterTypes()
+    {
+      var service = new DataService();
+      var actual = service.GetMonsterType();
+
+      Assert.NotNull(actual);
+    }
+
+    [Fact]
+    public void Test_Titles()
+    {
+      var service = new DataService();
+      var actual = service.GetTitles();
+
+      Assert.NotNull(actual);
+    }
   }
 }

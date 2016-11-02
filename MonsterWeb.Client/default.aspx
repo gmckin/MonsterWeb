@@ -12,7 +12,18 @@
       <asp:ListBox runat="server" id="genderlist" ClientIDMode="Static">
          
       </asp:ListBox>
+       
     </div>
+      <div>
+        <asp:ListBox runat="server" id="monstertypelist" ClientIDMode="Static">
+         
+      </asp:ListBox>
+      </div>
+      <div>
+        <asp:ListBox runat="server" id="titlelist" ClientIDMode="Static">
+         
+      </asp:ListBox>
+      </div>
     </form>
 </body>
 </html>
