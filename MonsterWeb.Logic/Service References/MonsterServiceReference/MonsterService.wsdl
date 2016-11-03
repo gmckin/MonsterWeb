@@ -25,6 +25,30 @@
   <wsdl:message name="IMonsterService_GetTitles_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetTitlesResponse" />
   </wsdl:message>
+  <wsdl:message name="IMonsterService_InsertMonster_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertMonster" />
+  </wsdl:message>
+  <wsdl:message name="IMonsterService_InsertMonster_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertMonsterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMonsterService_InsertGender_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertGender" />
+  </wsdl:message>
+  <wsdl:message name="IMonsterService_InsertGender_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertGenderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMonsterService_InsertMonsterType_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertMonsterType" />
+  </wsdl:message>
+  <wsdl:message name="IMonsterService_InsertMonsterType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertMonsterTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMonsterService_InsertTitle_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertTitle" />
+  </wsdl:message>
+  <wsdl:message name="IMonsterService_InsertTitle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertTitleResponse" />
+  </wsdl:message>
   <wsdl:portType name="IMonsterService">
     <wsdl:operation name="GetGender">
       <wsdl:input wsaw:Action="http://tempuri.org/IMonsterService/GetGender" message="tns:IMonsterService_GetGender_InputMessage" />
@@ -37,6 +61,22 @@
     <wsdl:operation name="GetTitles">
       <wsdl:input wsaw:Action="http://tempuri.org/IMonsterService/GetTitles" message="tns:IMonsterService_GetTitles_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IMonsterService/GetTitlesResponse" message="tns:IMonsterService_GetTitles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertMonster">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMonsterService/InsertMonster" message="tns:IMonsterService_InsertMonster_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMonsterService/InsertMonsterResponse" message="tns:IMonsterService_InsertMonster_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertGender">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMonsterService/InsertGender" message="tns:IMonsterService_InsertGender_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMonsterService/InsertGenderResponse" message="tns:IMonsterService_InsertGender_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertMonsterType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMonsterService/InsertMonsterType" message="tns:IMonsterService_InsertMonsterType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMonsterService/InsertMonsterTypeResponse" message="tns:IMonsterService_InsertMonsterType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertTitle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMonsterService/InsertTitle" message="tns:IMonsterService_InsertTitle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMonsterService/InsertTitleResponse" message="tns:IMonsterService_InsertTitle_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IMonsterService" type="tns:IMonsterService">
@@ -61,6 +101,42 @@
     </wsdl:operation>
     <wsdl:operation name="GetTitles">
       <soap:operation soapAction="http://tempuri.org/IMonsterService/GetTitles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertMonster">
+      <soap:operation soapAction="http://tempuri.org/IMonsterService/InsertMonster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertGender">
+      <soap:operation soapAction="http://tempuri.org/IMonsterService/InsertGender" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertMonsterType">
+      <soap:operation soapAction="http://tempuri.org/IMonsterService/InsertMonsterType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertTitle">
+      <soap:operation soapAction="http://tempuri.org/IMonsterService/InsertTitle" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

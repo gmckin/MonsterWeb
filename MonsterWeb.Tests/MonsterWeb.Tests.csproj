@@ -75,6 +75,9 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\MonsterApp.DataClient.Models.GenderDAO.datasource" />
+    <None Include="Properties\DataSources\MonsterApp.DataClient.Models.MonsterTypeDAO.datasource" />
+    <None Include="Properties\DataSources\MonsterApp.DataClient.Models.TitleDAO.datasource" />
     <None Include="Service References\MonsterServiceReference\MonsterService.wsdl" />
     <None Include="Service References\MonsterServiceReference\MonsterService.xsd">
       <SubType>Designer</SubType>
@@ -84,15 +87,6 @@
     </None>
     <None Include="Service References\MonsterServiceReference\MonsterService2.xsd">
       <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\MonsterServiceReference\MonsterWeb.Tests.MonsterServiceReference.GenderDAO.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\MonsterServiceReference\MonsterWeb.Tests.MonsterServiceReference.MonsterTypeDAO.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\MonsterServiceReference\MonsterWeb.Tests.MonsterServiceReference.TitleDAO.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

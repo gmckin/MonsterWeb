@@ -51,5 +51,17 @@ namespace MonsterWeb.Client
         titlelist.Items.Add(item.Name);
       }
     }
+
+    //private void GetMonsters()
+    //{
+    //  var data = new DataService();
+    //  genderlist.Items.Clear();
+
+    //  foreach (var item in data.GetMonsters())
+    //  {
+    //    genderlist.Items.Add(item.Name);
+    //  }
+
+    //}
   }
 }

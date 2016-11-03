@@ -73,7 +73,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="default.aspx" />
+    <Content Include="entryform.aspx" />
     <Content Include="packages.config" />
+    <Content Include="Properties\DataSources\MonsterApp.DataClient.Models.GenderDAO.datasource" />
+    <Content Include="Properties\DataSources\MonsterApp.DataClient.Models.MonsterTypeDAO.datasource" />
+    <Content Include="Properties\DataSources\MonsterApp.DataClient.Models.TitleDAO.datasource" />
     <None Include="Service References\MonsterServiceReference\MonsterService.wsdl" />
     <None Include="Service References\MonsterServiceReference\MonsterService.xsd">
       <SubType>Designer</SubType>
@@ -84,15 +88,6 @@
     <None Include="Service References\MonsterServiceReference\MonsterService2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <Content Include="Service References\MonsterServiceReference\MonsterWeb.Client.MonsterServiceReference.GenderDAO.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\MonsterServiceReference\MonsterWeb.Client.MonsterServiceReference.MonsterTypeDAO.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\MonsterServiceReference\MonsterWeb.Client.MonsterServiceReference.TitleDAO.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -117,6 +112,13 @@
     </Compile>
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="entryform.aspx.cs">
+      <DependentUpon>entryform.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="entryform.aspx.designer.cs">
+      <DependentUpon>entryform.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

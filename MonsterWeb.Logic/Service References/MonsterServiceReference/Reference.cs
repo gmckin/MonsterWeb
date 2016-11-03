@@ -32,6 +32,30 @@ namespace MonsterWeb.Logic.MonsterServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMonsterService/GetTitles", ReplyAction="http://tempuri.org/IMonsterService/GetTitlesResponse")]
         System.Threading.Tasks.Task<MonsterApp.DataClient.Models.TitleDAO[]> GetTitlesAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMonsterService/InsertMonster", ReplyAction="http://tempuri.org/IMonsterService/InsertMonsterResponse")]
+        bool InsertMonster(MonsterApp.DataClient.Models.MonsterDAO monster);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMonsterService/InsertMonster", ReplyAction="http://tempuri.org/IMonsterService/InsertMonsterResponse")]
+        System.Threading.Tasks.Task<bool> InsertMonsterAsync(MonsterApp.DataClient.Models.MonsterDAO monster);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMonsterService/InsertGender", ReplyAction="http://tempuri.org/IMonsterService/InsertGenderResponse")]
+        bool InsertGender(MonsterApp.DataClient.Models.GenderDAO gender);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMonsterService/InsertGender", ReplyAction="http://tempuri.org/IMonsterService/InsertGenderResponse")]
+        System.Threading.Tasks.Task<bool> InsertGenderAsync(MonsterApp.DataClient.Models.GenderDAO gender);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMonsterService/InsertMonsterType", ReplyAction="http://tempuri.org/IMonsterService/InsertMonsterTypeResponse")]
+        bool InsertMonsterType(MonsterApp.DataClient.Models.MonsterTypeDAO mtype);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMonsterService/InsertMonsterType", ReplyAction="http://tempuri.org/IMonsterService/InsertMonsterTypeResponse")]
+        System.Threading.Tasks.Task<bool> InsertMonsterTypeAsync(MonsterApp.DataClient.Models.MonsterTypeDAO mtype);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMonsterService/InsertTitle", ReplyAction="http://tempuri.org/IMonsterService/InsertTitleResponse")]
+        bool InsertTitle(MonsterApp.DataClient.Models.TitleDAO title);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMonsterService/InsertTitle", ReplyAction="http://tempuri.org/IMonsterService/InsertTitleResponse")]
+        System.Threading.Tasks.Task<bool> InsertTitleAsync(MonsterApp.DataClient.Models.TitleDAO title);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -83,6 +107,38 @@ namespace MonsterWeb.Logic.MonsterServiceReference {
         
         public System.Threading.Tasks.Task<MonsterApp.DataClient.Models.TitleDAO[]> GetTitlesAsync() {
             return base.Channel.GetTitlesAsync();
+        }
+        
+        public bool InsertMonster(MonsterApp.DataClient.Models.MonsterDAO monster) {
+            return base.Channel.InsertMonster(monster);
+        }
+        
+        public System.Threading.Tasks.Task<bool> InsertMonsterAsync(MonsterApp.DataClient.Models.MonsterDAO monster) {
+            return base.Channel.InsertMonsterAsync(monster);
+        }
+        
+        public bool InsertGender(MonsterApp.DataClient.Models.GenderDAO gender) {
+            return base.Channel.InsertGender(gender);
+        }
+        
+        public System.Threading.Tasks.Task<bool> InsertGenderAsync(MonsterApp.DataClient.Models.GenderDAO gender) {
+            return base.Channel.InsertGenderAsync(gender);
+        }
+        
+        public bool InsertMonsterType(MonsterApp.DataClient.Models.MonsterTypeDAO mtype) {
+            return base.Channel.InsertMonsterType(mtype);
+        }
+        
+        public System.Threading.Tasks.Task<bool> InsertMonsterTypeAsync(MonsterApp.DataClient.Models.MonsterTypeDAO mtype) {
+            return base.Channel.InsertMonsterTypeAsync(mtype);
+        }
+        
+        public bool InsertTitle(MonsterApp.DataClient.Models.TitleDAO title) {
+            return base.Channel.InsertTitle(title);
+        }
+        
+        public System.Threading.Tasks.Task<bool> InsertTitleAsync(MonsterApp.DataClient.Models.TitleDAO title) {
+            return base.Channel.InsertTitleAsync(title);
         }
     }
 }
