@@ -74,10 +74,12 @@
   <ItemGroup>
     <Content Include="default.aspx" />
     <Content Include="entryform.aspx" />
+    <Content Include="login.ascx" />
     <Content Include="packages.config" />
     <Content Include="Properties\DataSources\MonsterApp.DataClient.Models.GenderDAO.datasource" />
     <Content Include="Properties\DataSources\MonsterApp.DataClient.Models.MonsterTypeDAO.datasource" />
     <Content Include="Properties\DataSources\MonsterApp.DataClient.Models.TitleDAO.datasource" />
+    <Content Include="Welcome.aspx" />
     <None Include="Service References\MonsterServiceReference\MonsterService.wsdl" />
     <None Include="Service References\MonsterServiceReference\MonsterService.xsd">
       <SubType>Designer</SubType>
@@ -88,6 +90,7 @@
     <None Include="Service References\MonsterServiceReference\MonsterService2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Site.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -123,11 +126,32 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="login.ascx.cs">
+      <DependentUpon>login.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.ascx.designer.cs">
+      <DependentUpon>login.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\MonsterServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Welcome.aspx.cs">
+      <DependentUpon>Welcome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Welcome.aspx.designer.cs">
+      <DependentUpon>Welcome.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

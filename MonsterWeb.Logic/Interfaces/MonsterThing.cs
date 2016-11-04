@@ -9,13 +9,20 @@ namespace MonsterWeb.Logic.Interfaces
   public abstract class MonsterThing : IThing
   {
     public Guid Id { get;}
-    public virtual string Name
-    { get; }
+
+    public virtual int AppId { get; set; }
+    public virtual string Name { get; set; }
+
+    
     public virtual DateTime Creation { get; }
 
-    protected MonsterThing(string Name)
+    internal MonsterThing()
     {
       Id = Guid.NewGuid();
+      Name = "none";
+      Creation = DateTime.Now;
     }
+    internal abstract T Create<T>() where T : new();
+
   }
 }

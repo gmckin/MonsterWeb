@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using MonsterWeb.Logic.MonsterServiceReference;
 using MonsterApp.DataClient.Models;
+using MonsterWeb.Logic.Models;
+
 
 namespace MonsterWeb.Logic
 {
@@ -13,30 +15,51 @@ namespace MonsterWeb.Logic
   {
 
     private MonsterServiceClient msc = new MonsterServiceClient();
+    private FactoryThing<GenderDTO> genderFactory = new FactoryThing<GenderDTO>();
+    private FactoryThing<TypeDTO> typeFactory = new FactoryThing<TypeDTO>();
+    private FactoryThing<TitleDTO> titleFactory = new FactoryThing<TitleDTO>();
 
 
-    public List<GenderDAO> GetGender()
+    public List<GenderDTO> GetGender()
     {
-      return msc.GetGender().ToList();
+      var genders = new List<GenderDTO>();
+      foreach (var item in msc.GetGender())
+      {
+        var g = genderFactory.Create();
+        g.AppId = item.Id;
+        g.Name = item.Name;
+        genders.Add(g);
+      }
+      return genders;
     }
 
-    public List<MonsterTypeDAO> GetMonsterType()
+    public List<TypeDTO> GetMonsterType()
     {
-      return msc.GetMonsterType().ToList();
+      var monstertype = new List<TypeDTO>();
+      foreach(var item in msc.GetMonsterType())
+      {
+        var t = typeFactory.Create();
+      }
+      return monstertype;
     }
 
-    public List<TitleDAO> GetTitles()
+    public List<TitleDTO> GetTitles()
     {
-      return msc.GetTitles().ToList();
+      var title = new List<TitleDTO>();
+      foreach (var item in msc.GetMonsterType())
+      {
+        var t = titleFactory.Create();
+      }
+      return title;
     }
 
 
 
-    public bool InsertMonster(string name, string gender)//, string type)
+    public bool InsertMonster(GenderDTO gender)//, string type)
     {
-      var gen = msc.GetGender().FirstOrDefault(g => g.Name == gender);
+      var gen = msc.GetGender().FirstOrDefault(g => g.Id == gender.AppId);
      // var ty = msc.GetMonsterType().FirstOrDefault(t => t.Name == type);
-      var mon = new MonsterDAO{ Name = name, Gender = gen, Type = new MonsterTypeDAO() { Id = 1 } };
+      var mon = new MonsterDAO{ Name = gender.Name, Gender = gen, Type = new MonsterTypeDAO() { Id = 1 } };
 
       return msc.InsertMonster(mon);
       //return false;

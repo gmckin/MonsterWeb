@@ -10,51 +10,42 @@
 namespace MonsterWeb.Client {
     
     
-    public partial class entryform {
+    public partial class login {
         
         /// <summary>
-        /// MonsterName control.
+        /// Username control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label MonsterName;
+        protected global::System.Web.UI.WebControls.TextBox Username;
         
         /// <summary>
-        /// MonsterName_Text control.
+        /// Password control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox MonsterName_Text;
+        protected global::System.Web.UI.WebControls.TextBox Password;
         
         /// <summary>
-        /// MonsterGender control.
+        /// Login control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label MonsterGender;
+        protected global::System.Web.UI.WebControls.Button Login;
         
         /// <summary>
-        /// MonsterGender_List control.
+        /// Message control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList MonsterGender_List;
-        
-        /// <summary>
-        /// Monster_submit control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Monster_submit;
+        protected global::System.Web.UI.WebControls.Label Message;
     }
 }

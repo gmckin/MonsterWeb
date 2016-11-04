@@ -1,4 +1,5 @@
 ﻿using MonsterWeb.Logic;
+using MonsterWeb.Logic.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,7 @@ namespace MonsterWeb.Client
   public partial class entryform : System.Web.UI.Page
   {
     private DataService data = new DataService();
+    private FactoryThing<GenderDTO> genderFactory = new FactoryThing<GenderDTO>();
     protected void Page_Load(object sender, EventArgs e)
     {
 
@@ -29,37 +31,15 @@ namespace MonsterWeb.Client
       {
         return false;
       }
-      return data.InsertMonster(MonsterName_Text.Text, MonsterGender_List.SelectedItem.Text);
-      
+
+      var gender = genderFactory.Create();
+      gender.AppId = int.Parse(MonsterGender_List.SelectedItem.Value);
+      gender.Name = MonsterName_Text.Text;
+
+      return data.InsertMonster(gender);
+      //return false;
     }
-    //private bool InsertGenderValidated()
-    //{
-    //  if (string.IsNullOrWhiteSpace(MonsterName_Text.Text))
-    //  {
-    //    return false;
-    //  }
-    //  return data.InsertGender(GenderName_Text.Text);
-
-    //}
-
-    //private bool InsertMTValidated()
-    //{
-    //  if (string.IsNullOrWhiteSpace(MonsterName_Text.Text))
-    //  {
-    //    return false;
-    //  }
-    //  return data.InsertMonsterType(MonsterTypeName_Text.Text);
-
-    //}
-    //private bool InsertTitleValidated()
-    //{
-    //  if (string.IsNullOrWhiteSpace(TitleName_Text.Text))
-    //  {
-    //    return false;
-    //  }
-    //  return data.InsertTitle(TitleName_Text.Text);
-
-    //}
+    
     protected void MonsterSubmit_Click(object sender, EventArgs e)
     {
       if (InsertValidated())
@@ -101,7 +81,7 @@ namespace MonsterWeb.Client
       MonsterGender_List.Items.Clear();
       foreach (var item in data.GetGender())
       {
-        MonsterGender_List.Items.Add(new ListItem() { Text = item.Name, Value = item.Id.ToString() });
+        MonsterGender_List.Items.Add(new ListItem() { Text = item.Name, Value = item.AppId.ToString() });
       }
     }
   }

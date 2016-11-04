@@ -7,11 +7,13 @@ using System.Threading.Tasks;
 
 namespace MonsterWeb.Logic
 {
-  public class FactoryThing<T> where T : new()
+  public class FactoryThing<T> where T : MonsterThing, new()
   {
-    public T Create()//where T : MonsterThing, new()
+    public T Create()//
     {
-      return new T();
+      var o = new T();
+      return o.Create<T>();
+      //return new T();
     }
   }
 }

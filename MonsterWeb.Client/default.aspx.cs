@@ -17,7 +17,6 @@ namespace MonsterWeb.Client
       GetGenders();
       GetMonsterTypes();
       GetTitles();
-
     }
     private void GetGenders()
     {
@@ -28,7 +27,7 @@ namespace MonsterWeb.Client
       {
         genderlist.Items.Add(item.Name);
       }
-      
+
     }
 
     private void GetMonsterTypes()
